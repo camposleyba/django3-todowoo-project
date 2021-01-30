@@ -1,6 +1,10 @@
 <h1>Sign Up</h1>
 
-<form method="POST">
+<h2>{{ error }}</h2>
+
+<form method="POST"> <!--La dif entre un GET y un POST como method del form, es que en el GET lo que se llena
+                          en el form se puede ver en la barra de navegación, mientras que con POST queda oculto-->
+  {% csrf_token %}
 {{ form.as_p }}
 <button type="submit">Sign Up</button>
 </form>
